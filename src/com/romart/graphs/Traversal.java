@@ -15,7 +15,7 @@ public final class Traversal {
     /*
             DFS Iterative using a Stack
     */
-    public static void depthForSearchIterative(Node node) {
+    public static void depthFirstSearchIterative(Node node) {
         Stack<Node> stack = new Stack<>();
         stack.push(node);
 
@@ -37,7 +37,7 @@ public final class Traversal {
         }
     }
 
-    public static void depthForSearchRecursive(Node node) {
+    public static void depthFirstSearchRecursive(Node node) {
         List<Node> neighbours = node.getNeighbours();
 
         node.visit();
@@ -45,7 +45,7 @@ public final class Traversal {
 
         for(Node neighbour : neighbours) {
             if(neighbour != null && neighbour.isVisited()) {
-                depthForSearchRecursive(neighbour);
+                depthFirstSearchRecursive(neighbour);
             }
         }
     }
