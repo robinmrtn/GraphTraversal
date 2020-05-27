@@ -29,7 +29,7 @@ public final class Traversal {
             List<Node> neighbours = currentNode.getNeighbours();
 
             for (Node neighbour : neighbours) {
-                if (neighbour != null && neighbour.isVisited()) {
+                if (neighbour != null && !neighbour.isVisited()) {
                     stack.push(neighbour);
                 }
             }
@@ -41,8 +41,8 @@ public final class Traversal {
 
         node.visit();
 
-        for(Node neighbour : neighbours) {
-            if(neighbour != null && neighbour.isVisited()) {
+        for (Node neighbour : neighbours) {
+            if(neighbour != null && !neighbour.isVisited()) {
                 depthFirstSearchRecursive(neighbour);
             }
         }
