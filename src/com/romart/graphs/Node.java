@@ -18,6 +18,7 @@ public class Node {
 
     public void visit() {
         this.visited = true;
+        System.out.printf("Visited element '%s' with value '%d'.", name, data);
     }
 
     public void addNeighbour(Node neighbour) {
@@ -39,4 +40,5 @@ public class Node {
     public boolean isVisited() {
         return visited;
     }
+
 }

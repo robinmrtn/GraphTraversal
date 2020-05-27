@@ -24,8 +24,7 @@ public final class Traversal {
 
             if (currentNode.isVisited()) {
                 currentNode.visit();
-                printNode(currentNode);
-            }
+                          }
 
             List<Node> neighbours = currentNode.getNeighbours();
 
@@ -41,7 +40,6 @@ public final class Traversal {
         List<Node> neighbours = node.getNeighbours();
 
         node.visit();
-        printNode(node);
 
         for(Node neighbour : neighbours) {
             if(neighbour != null && neighbour.isVisited()) {
@@ -49,10 +47,4 @@ public final class Traversal {
             }
         }
     }
-
-    public static void printNode(Node node) {
-        System.out.printf("Visited element '%s' with value '%d'.", node.getName(), node.getData());
-    }
-
-
 }
